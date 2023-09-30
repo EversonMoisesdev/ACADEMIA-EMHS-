@@ -73,7 +73,7 @@ public class AlunoController : ControllerBase
         if (PlanoAluno.Pagamento == "Pago")
         {
 
-            return Ok(Pagamento1);
+            return Ok(Pagamento2);
         }
         else if (PlanoAluno.Pagamento == "Nao pago")
         {
