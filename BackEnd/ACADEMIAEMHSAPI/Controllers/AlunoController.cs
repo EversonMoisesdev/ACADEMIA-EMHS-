@@ -1,24 +1,45 @@
-﻿using ACADEMIAEMHSAPI.Entities;
+﻿
+using Domain.Entities;
+using Domain.Interface;
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection.Metadata.Ecma335;
 
 namespace ACADEMIAEMHSAPI.Controllers
 {
-    public class AlunoController
+
+    [ApiController]
+    [Route("[controller]")]
+    public class AlunoController : ControllerBase
     {
+        private readonly IAlunoService _alunoService;
+        public AlunoController(IAlunoService alunoService)
+        {
+            _alunoService = alunoService;
+
+        }
+        [HttpPost(Name = "CreateAluno")]
+        public ActionResult CreatAluno(Aluno alunoObject)
+        {
+
+
+            string resultado = _alunoService.CreateAluno(alunoObject);
+
+            return Ok(resultado);
+
+
+        }
+
+        [HttpGet(Name = "GetAllAlunos")]
+
+        public ActionResult GetAllAlunos()
+        {
+
+
+           var resultado =  _alunoService.GetAllAluno();
+
+            return Ok(resultado);
+        }
+
+
     }
-}
-[ApiController]
-[Route("[controller]")]
-public class AlunoController : ControllerBase
-{
-    [HttpPost (Name ="CreateAluno")] 
-    public Aluno CreatAluno (Aluno alunoObject)
-    {
-        string retorno = "Aluno criado com sucesso";
-
-        return alunoObject;
-
-      
-    }   
 }

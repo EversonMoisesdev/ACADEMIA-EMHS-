@@ -1,4 +1,4 @@
-﻿namespace ACADEMIAEMHSAPI.Entities
+﻿namespace Domain.Entities
 {
     public class Aluno
     {
