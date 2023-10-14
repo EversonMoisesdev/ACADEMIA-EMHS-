@@ -2,7 +2,6 @@
 using Domain.Entities;
 using Domain.Interface;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection.Metadata.Ecma335;
 
 namespace ACADEMIAEMHSAPI.Controllers
 {
