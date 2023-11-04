@@ -1,25 +1,24 @@
-<h3>Consulta Alunos</h3>
-<p>Listagem de alunos cadastrados</p>
+<h3>Consulta Funcionários </h3>
+<p>Listagem de Funcionários cadastrados </p>
 <hr>
 
 <div class="table-responsive">
   <table class="table table-sm table-hover table-striped">
     <thead>
       <tr>
-        <th [width]="200">Nome do aluno</th>
+        <th [width]="200">Nome do Funcionário</th>
         <th>Idade</th>
-        <th [width]="400">Matricula</th>
-        <th [width]="400">Sexo</th>
+        <th [width]="400">Cargo</th>
         <th [width]="140">Operações</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let aluno of alunos">
-        <td> {{ aluno.nome }} </td>
-        <td> {{ aluno.idade }} </td>
-        <td> {{ aluno.matricula }} </td>
-        <td> {{ aluno.sexo }} </td>
-
+      <tr *ngFor="let funcionario of funcionarios">
+        <td> {{funcionario.nome}} </td>
+        <td> {{funcionario.idade}} </td>
+        <td>
+          <small>{{funcionario.cargo}}</small>
+        </td>
         <td>
           <button class="btn btn-sm btn-outline-primary me-2">Editar</button>
           <button class="btn btn-sm btn-outline-danger">Excluir</button>
@@ -29,9 +28,10 @@
 
     <tfoot>
       <tr>
-        <td colspan="8">Quantidade de alunos: {{ quantidadeDeAlunos }} </td>
+        <td colspan="8">Quantidade de funcionários: {{quantidadeDeFuncionario}} </td>
       </tr>
     </tfoot>
 
   </table>
+
 </div>

@@ -7,6 +7,12 @@ import { CadastroAlunosComponent } from './components/pages/cadastro-alunos/cada
 import { ConsultaAlunosComponent } from './components/pages/consulta-alunos/consulta-alunos.component';
 import { EdicaoAlunosComponent } from './components/pages/edicao-alunos/edicao-alunos.component';
 import { AppRoutingModule } from './components/pages/app.routing';
+import { CadastroFuncionariosComponent } from './components/pages/cadastro-funcionarios/cadastro-funcionarios.component';
+import { CadastroFornecedoresComponent } from './components/pages/cadastro-fornecedores/cadastro-fornecedores.component';
+import { ConsultaFornecedoresComponent } from './components/pages/consulta-fornecedores/consulta-fornecedores.component';
+import { ConsultaFuncionariosComponent } from './components/pages/consulta-funcionarios/consulta-funcionarios.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -16,10 +22,18 @@ import { AppRoutingModule } from './components/pages/app.routing';
     CadastroAlunosComponent,
     ConsultaAlunosComponent,
     EdicaoAlunosComponent,
+    CadastroFuncionariosComponent,
+    CadastroFornecedoresComponent,
+    ConsultaFornecedoresComponent,
+    ConsultaFuncionariosComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule // Adicionando as configurações das rotas 
+    AppRoutingModule, // Adicionando as configurações das rotas
+    FormsModule, //Para utilizar formularios
+    ReactiveFormsModule, // Para utilizar formularios reativos
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

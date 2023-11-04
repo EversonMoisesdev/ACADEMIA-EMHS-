@@ -1,0 +1,51 @@
+<p>cadastro-funcionarios works!</p>
+<h3>Cadastro de Funcionários</h3>
+<p>Preencha os campos para incluir um funcionário</p>
+<hr>
+<form>
+    <div class="row mb-2">
+      <div class="col-md-4">
+        <label>Nome do Funcionário:</label>
+        <input type="text" class="form-control" placeholder="Digite o nome aqui." formControlName="nome">
+      </div>
+
+
+      <div class="col-md-1">
+        <label>Idade:</label>
+        <input type="text" class="form-control" placeholder="Digite a idade aqui." formControlName="idade">
+      </div>
+
+
+      <div class="col-md-2">
+        <label>CPF:</label>
+        <input type="text" class="form-control" placeholder="Digite o cpf aqui." formControlName="cpf">
+      </div>
+
+
+      <div class="col-md-4">
+        <label>E-mail:</label>
+        <input type="text" class="form-control" placeholder="Digite o e-mail aqui." formControlName="email">
+      </div>
+
+
+      <div class="row mb-2">
+        <div class="col-md-12">
+          <label>Observações:</label>
+          <textarea class="form-control" placeholder="Digite as Observações aqui." formControlName="observacoes"></textarea>
+        </div>
+      </div>
+
+
+      <div class="row mb-2">
+        <div class="col-md-12">
+          <input type="submit" class="btn btn-success" value="Realizar Cadastro">
+          <a class="btn btn-secondary ms-2">Ir para a consulta</a>
+        </div>
+      </div>
+
+
+    </div>
+</form>
+
+
+

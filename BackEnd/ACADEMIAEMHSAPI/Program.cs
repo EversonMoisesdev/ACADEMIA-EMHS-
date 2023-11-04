@@ -1,5 +1,6 @@
 using Application.Service;
 using Domain.Interface;
+using Infra;
 
 ;
 
@@ -7,6 +8,9 @@ using Domain.Interface;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddScoped<IAlunoService, AlunoService>();
+builder.Services.AddScoped<IAlunoRepository, AlunoRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -23,7 +27,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+
 app.UseHttpsRedirection();
+
+app.UseCors(x => x
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
 
 app.UseAuthorization();
 
